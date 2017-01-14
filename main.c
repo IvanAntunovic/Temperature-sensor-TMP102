@@ -2,7 +2,7 @@
  * TMP102.c
  *
  * Created: 12/28/2016 2:20:14 PM
- * Author : fairenough
+ * Author : Ivan Antunovic
  */ 
 
 
