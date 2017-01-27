@@ -129,23 +129,10 @@ int main(void)
 		i2c_stop();
 		
 		
-		
-		/*
-		i2c_start();
-		i2c_send(TMP102_ADDRESS_W);
-		i2c_send(TMP102_CONFIG_REGISTER);
-		i2c_send(TMP102_CONFIG_DATA_BYTE_1);
-		i2c_send(TMP102_CONFIG_DATA_BYTE_2);
-		i2c_stop();
-		
-		i2c_start();
-		i2c_send(TMP102_ADDRESS_R);
-		tempHighByte = i2c_read_ack();
-		tempLowByte = i2c_read_noAck();
-		i2c_stop();
-		*/
 		temp = 0.0625 * ( (tempHighByte << 4) | (tempLowByte >>4) );
 		itoa((int)temp, buffer, 10);
+		LCD_puts(buffer);
+		
 		USART_puts(buffer);
 		USART_puts("TEMP:");
 	}
